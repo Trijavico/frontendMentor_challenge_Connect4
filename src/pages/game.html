@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Four</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="second">
+
+    <main class="game">
+
+        <header class="game__header">
+            <div class="header">
+                <a href="../../index.html">MENU</a>
+
+                <div class="logo">
+                    <div class="circle --shadow"></div>
+                    <div class="circle --shadow"></div>
+                    <div class="circle --shadow"></div>
+                    <div class="circle --shadow"></div>
+                </div>
+
+                <a href="#">RESTART</a>
+            </div>
+        </header>
+
+
+        <section class="game__grid">
+            
+            <div class="game__player">
+                <div class="card --shadow">
+                    <span>PLAYER 1</span>
+                    <span class="count">12</span>
+                </div>
+            </div>
+    
+            <div class="game__player">
+                <div class="card --shadow">
+                    <span>PLAYER 2</span>
+                    <span class="count">23</span>
+                </div>
+            </div>
+    
+            <section class="game__board ">
+                <div class="board --shadow">
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+            </section>
+    
+            <div class="game__timer">
+                <div class="filter">
+                    <div class="timer_container">
+                        <span class="turn">PLAYER 1's TURN</span>
+                        <span class="seconds">15s</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+              <filter id="round">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />    
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                  <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+              </filter>
+          </defs>
+    </svg>
+</body>
+</html>

@@ -1,0 +1,17 @@
+@use '../utils' as *;
+
+.header{
+    padding: rem(36) 0 rem(25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a{
+        font-size: rem(12);
+        font-weight: 500;
+        padding: rem(6) rem(16);
+        color: hsl(0, 0%, 95%);
+        border-radius: rem(25);
+        background-color: hsl(257, 67%, 51%);
+    }
+}

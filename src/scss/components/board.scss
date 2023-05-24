@@ -1,0 +1,29 @@
+@use '../utils' as *;
+
+.board{
+    margin-top: rem(10);
+    padding: rem(10) rem(10) rem(48);
+    border-radius: rem(30);
+    background-color: hsl(0, 0%, 95%);
+    position: relative;
+
+    display: grid;
+    gap: rem(10);
+    grid-template-columns: repeat(7,1fr);
+
+    .cell{
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        border: rem(2) solid black;
+        box-shadow: inset 0 rem(8) 0 black;
+        background-color: hsl(257, 100%, 64%);
+
+        @include breakpoint(medium){
+            max-width: rem(66);
+        }
+
+        @include breakpoint(large){
+            max-width: rem(50);
+        }
+    }
+}

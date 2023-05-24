@@ -1,0 +1,32 @@
+@use '../utils' as *;
+
+.card{
+    padding: rem(10) rem(15);
+    font-size: rem(14);
+    font-weight: 700;
+    border-radius: rem(16);
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .count{
+        font-size: rem(25);
+        /* line-height: rem(25); */
+    }
+
+    @include breakpoint(medium){
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        .count{
+            font-size: rem(35);
+        }
+    }
+
+    @include breakpoint(large){
+        padding: rem(35) rem(20) rem(15);
+        flex-direction: column;
+    }
+}

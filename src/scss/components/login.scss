@@ -1,0 +1,54 @@
+@use '../utils' as *;
+
+.login{
+    margin: 0 rem(20);
+
+    @include breakpoint(medium){
+        min-width: rem(350);
+        margin: 0 auto;
+        padding: 0 rem(20) rem(40);
+        border-radius: rem(25);
+        background-color: hsl(257, 100%, 64%);
+        border: rem(2) solid black;
+        filter: drop-shadow(0 rem(5) 0 black);
+    }
+
+    &__header{
+        display: flex;
+        justify-content: center;
+        margin: rem(60) auto;
+    }
+
+    &__option{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        color: black;
+        font-weight: 700;
+        padding: rem(10);
+        border-radius: rem(15);
+        background-color: #f2f2f2;
+        filter: drop-shadow(0 rem(6) 0 black);
+
+        img{
+            width: rem(25);
+            aspect-ratio: 1/1;
+        }
+
+        &--cpu{
+            background-color: hsl(347, 99%, 70%);
+            color: white;
+        }
+
+        &--player{
+            background-color: hsl(42, 97%, 70%);
+        }
+
+        &--rules{
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+    }
+}

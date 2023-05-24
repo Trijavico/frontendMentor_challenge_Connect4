@@ -1,0 +1,54 @@
+@use '../utils/' as *;
+
+.modal{
+    max-width: 50ch;
+    padding: rem(25) rem(25) rem(45);
+    border-radius: rem(25);
+    position: relative;
+    overflow: visible;
+
+    &::backdrop{
+        background-color:hsl(257, 67%, 50%);
+    }
+
+    header{
+        text-align: center;
+        font-size: rem(25);
+    }
+
+    h2{
+        padding-bottom: rem(25);
+    }
+
+    h3{
+        padding-bottom: rem(16);
+        font-weight: 500;
+        color: hsl(262, 30%, 60%);
+    }
+
+    p{
+        padding-bottom: rem(18);
+    }
+
+    ol{
+        display: grid;
+        gap: rem(10);
+        padding-left: rem(16);
+    }
+
+    button{
+        display: grid;
+        color: white;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        font-size: rem(45);
+        place-items: center;
+        background-color: hsl(347, 99%, 70%);
+
+        position: absolute;
+        bottom: rem(-25);
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,24 @@
+@use '../utils/converter' as *;
+
+.logo{
+    width: clamp(rem(35), 6vmin + rem(1), rem(75));
+    aspect-ratio: 1/1;
+    position: relative;
+
+    display: grid;
+    gap: rem(5);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    place-content: center;
+
+    .circle{
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        filter: drop-shadow(0 rem(3) 0 black);
+        background-color: hsl(347, 99%, 70%);
+    }
+
+    .circle:nth-child(2), .circle:nth-child(3){
+        background-color: hsl(42, 97%, 70%);
+    }
+}

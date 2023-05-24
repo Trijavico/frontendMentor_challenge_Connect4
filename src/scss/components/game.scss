@@ -1,0 +1,107 @@
+@use '../utils' as *;
+
+.game{
+    padding: 0 rem(25);
+
+    @include breakpoint(large){
+        padding: 0;
+    }
+
+    &__header{
+        display: grid;
+
+        @include breakpoint (large){
+            grid-template-columns: repeat(3, 1fr);
+
+            & .header{
+                width: rem(456);
+                grid-column: 2/3;
+            }
+        }
+    }
+
+
+    &__player{
+        padding: 0 0 0 rem(12);
+        align-self: center;
+        grid-column: 1/2;
+    
+        & + &{
+            padding: 0 rem(12) 0 0;
+            grid-column: 2 / -1;
+        }
+
+        @include breakpoint(large){
+            justify-self: end;
+            padding-right: rem(45);
+
+            & + &{
+                padding: 0 0 0 rem(45);
+                justify-self: start;
+                grid-column: 3/4;
+            }
+        }
+    }
+
+    &__grid{
+        display: grid;
+        gap: rem(10);
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+
+        @include breakpoint(large){
+            gap: 0;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    &__board{
+        grid-column: 1/-1;
+
+        @include breakpoint(large){
+            width: rem(456);
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+    }
+
+
+    &__timer{
+        filter: drop-shadow(0 rem(10) 0 black);
+        position: absolute;
+        bottom: rem(-75);
+        left: 50%;
+        transform: translate(-50%);
+
+        .filter{
+            filter: url(#round);
+        }
+        
+
+        .timer_container{
+            color: hsl(0, 0%, 95%);
+            padding: rem(32) rem(25) rem(20);
+            background-color: hsl(347, 97%, 70%);
+            clip-path: polygon(50% 0, 100% 25%, 100% 100%, 0 100%, 0 25%);
+            position: relative;
+            z-index: 1000;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            .turn{
+                font-weight: 600;
+                font-size: rem(13);
+            }
+    
+            .seconds{
+                line-height: rem(45);
+                font-weight: 700;
+                font-size: rem(45);
+            }
+            
+        }
+    }
+
+}

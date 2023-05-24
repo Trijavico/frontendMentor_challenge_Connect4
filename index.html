@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+    <main class="wrapper">
+        <section class="login">
+            <header class="login__header">
+                <div class="logo">
+                    <div class="circle --shadow"></div>
+                    <div class="circle --shadow"></div>
+                    <div class="circle --shadow"></div>
+                    <div class="circle --shadow"></div>
+                </div>
+            </header>
+
+            <div class="column">
+                <a href="./src/pages/game.html" class="login__option login__option--cpu --shadow">
+                    PLAY VS CPU
+                    <span>
+                        <img src="./src/assets/smiling-happy-emoticon-face (1).png" alt="smiling face">
+                        <img src="./src/assets/happy.png" alt="happy face">
+                    </span>
+                </a>
+                <a href="./src/pages/game.html" class="login__option login__option--player --shadow">
+                    PLAY VS PLAYER
+                    <span>
+                        <img src="./src/assets/smiling-happy-emoticon-face.png" alt="happy face">
+                        <img src="./src/assets/sceptic.png" alt="sceptic face">
+                    </span>
+                </a>
+                <button data-modal-open class="login__option login__option--rules --shadow">GAME RULES</button>
+            </div>
+        </section>
+
+
+        <dialog class="modal --shadow">
+            <header>
+                <h2>RULES</h2>
+            </header>
+
+            <h3>OBJECTIVE</h3>
+            <p>Be the first player to connect 4 of the same colored discs in a row (either vertically, horizontally or diagonally).</p>
+
+            <h3>HOW TO PLAY</h3>
+
+            <ol>
+                <li>Red goes first in the first game</li>
+                <li>Players must alternate turns and only one disc can be dropped in each turn</li>
+                <li>The game ends when there is a 4-in-a-row or a stalemate</li>
+                <li>The starter of the previous game goes second on the next game</li>
+            </ol>
+
+            <button data-modal-close><ion-icon name="chevron-back-outline"></ion-icon></button>
+        </dialog>
+    </main>
+
+    <script defer type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script defer nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./src/js/script.js" defer></script>
+</body>
+</html>
